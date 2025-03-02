@@ -19,25 +19,20 @@ int dividir(int dividendo, int divisor) {
     long long divisor_abs = llabs((long long)divisor);
 
     long long cociente = 0;
-
-    // Algoritmo de resta repetitiva optimizado con desplazamientos de bits
+   // Algoritmo de resta repetitiva optimizado con desplazamientos de bits
     while (dividendo_abs >= divisor_abs) {
         long long temp = divisor_abs, multiplo = 1;
-
-        // Duplicar el divisor hasta que sea menor o igual al dividendo
+  // Duplicar el divisor hasta que sea menor o igual al dividendo
         while (dividendo_abs >= (temp << 1)) {
             temp <<= 1;       // Multiplicar por 2 usando desplazamiento de bits
             multiplo <<= 1;   // Multiplicar por 2
         }
-
-        // Restar el valor encontrado del dividendo
+ // Restar el valor encontrado del dividendo
         dividendo_abs -= temp;
         cociente += multiplo;
     }
-
-    return signo * (int)cociente; // Aplicar el signo y devolver el resultado
+ return signo * (int)cociente; // Aplicar el signo y devolver el resultado
 }
-
 int main() {
     int dividendo, divisor;
 
@@ -52,10 +47,11 @@ int main() {
         printf("Error: No se puede dividir por 0.\n");
         return 1;
     }
-
-    // Realizar la división e imprimir el resultado
+// Realizar la división e imprimir el resultado
     int resultado = dividir(dividendo, divisor);
     printf("Resultado de la división truncada: %d\n", resultado);
 
     return 0;
 }
+    
+       
