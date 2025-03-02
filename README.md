@@ -39,7 +39,7 @@ int main() {
     // Entrada de usuario
     printf("Ingrese el dividendo: ");
     scanf("%d", &dividendo);
-    printf("Ingrese el divisor (distinto de 0): ");
+    printf("Ingrese el divisor (distinto de 0): "); 
     scanf("%d", &divisor);
 
     // Verificar que el divisor no sea 0
